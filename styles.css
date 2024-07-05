@@ -1,0 +1,19 @@
+:root {
+    --cor1: #BA19FA;
+    --cor2: #9F3CC7;
+    --cor3: #7F4A94;
+    --cor4: #594461;
+    --cor5: #322E33;
+    /*poppins font*/
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
