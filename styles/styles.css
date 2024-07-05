@@ -8,6 +8,11 @@
 }
 */
 
+/*
+header has z-index 7777
+mobile-menu has index 8888
+*/
+
 /*General tyles*/
 :root {
     --cor1: #BA19FA;
@@ -83,17 +88,17 @@ h2.subtitle span {
     transform: scale(1.1)
 }
 
+
 /*header styles*/
 
 header {
-    /*
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    */
     box-shadow: 0px 1px 12px 0px #6e6c6ca1;
     background-color: var(--cor5);
+    z-index: 7777;
 
 }
 header .interface {
@@ -129,6 +134,64 @@ header nav ul li {
 
 .btn button:hover {
     box-shadow: 0 0 8px var(--cor3);
+}
+
+/*Menu mobile styles*/
+
+.menu-symbol {
+    display: none;
+}
+
+.menu-symbol i {
+    font-size: 30px;
+    color: var(--cor1);
+}
+
+
+.mobile-menu {
+    background-color: var(--cor4);
+    height: 100vh;
+    width: 70%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 8888;
+    width: 0%;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.mobile-menu.open-menu {
+    width: 70%;
+}
+
+.mobile-menu nav ul {
+    text-align: center;
+}
+
+.mobile-menu nav ul li {
+    display: block;
+}
+
+.mobile-menu nav ul a {
+    font-weight: 600;
+    padding: 20px 0;
+    color: #fff;
+    display: block;
+}
+
+.mobile-menu nav ul a:hover {
+    background-color: var(--cor2);
+}
+
+.mobile-menu .close-menu-button {
+    padding: 20px 8%;
+}
+
+.mobile-menu .close-menu-button i {
+    color: var(--cor1);
+    font-size: 25px;
+    font-weight: 600;
 }
 
 /*top-site styles*/
@@ -303,15 +366,37 @@ footer a:hover {
         padding: 40px 8%;
     }
 
+/* header styles*/
+
+.menu-symbol {
+    display: block;
+}
+
 /*Top Site styles*/
     .top-site .flex-style {
         flex-direction: column-reverse;
         gap: 20px;
     }
 
+    header .interface .desktop-menu {
+        display: none;
+    }
+
+
+
 /* About section style*/
     .about-me .interface .flex-style {
-        gap: 40px;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-me .interface .namicano-photo {
+        text-align: center;
+    }
+
+    .about-me .interface .namicano-photo img {
+        width: 90%;
     }
 
 
